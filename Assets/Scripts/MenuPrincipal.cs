@@ -23,6 +23,6 @@ public class SceneM: MonoBehaviour
 }
     public void creditos()
 {
-    SceneManager.LoadScene("CREDITOS", LoadSceneMode.Single);
+    SceneManager.LoadScene("creditos2", LoadSceneMode.Single);
 }
 }
