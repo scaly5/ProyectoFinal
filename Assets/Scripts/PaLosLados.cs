@@ -20,7 +20,6 @@ public class PaLosLados : MonoBehaviour
         {
             waypointsIndex += direction;
 
-            
             if (waypointsIndex >= waypoints.Length)
             {
                 waypointsIndex = waypoints.Length - 2;
@@ -33,10 +32,22 @@ public class PaLosLados : MonoBehaviour
             }
         }
 
-        transform.position = Vector3.MoveTowards(
-            transform.position,
-            waypoints[waypointsIndex].transform.position,
-            plataformSpeed * Time.deltaTime
-        );
+        transform.position = Vector3.MoveTowards(transform.position, waypoints[waypointsIndex].transform.position,plataformSpeed * Time.deltaTime);
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            collision.transform.SetParent(transform);
+        }
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            collision.transform.SetParent(null);
+        }
     }
 }
