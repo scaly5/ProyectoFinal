@@ -17,6 +17,8 @@ public class PlayerController : MonoBehaviour
     float h_mouse, v_mouse;
 
     private Vector3 move = Vector3.zero;
+    public float Life = 100f;
+    public float MaxLife = 100f;
 
     void Start()
     {
