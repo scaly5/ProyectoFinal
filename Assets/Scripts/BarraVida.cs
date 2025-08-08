@@ -8,13 +8,28 @@ public class BarraVida : MonoBehaviour
     public Image barraDeVida;
     public PlayerStats playerStats;
     public GameObject player;
-    
+
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
+        if (player == null)
+            player = GameObject.FindGameObjectWithTag("Player");
+
+        if (player != null)
+        {
+            if (playerStats == null)
+                playerStats = player.GetComponent<PlayerStats>();
+        }
     }
+
     void Update()
     {
-        barraDeVida.fillAmount = player.GetComponent<PlayerController>().Life / playerStats.MaxLife;
+        if (player != null && barraDeVida != null && playerStats != null)
+        {
+            var controller = player.GetComponent<PlayerController>();
+            if (controller != null)
+            {
+                barraDeVida.fillAmount = controller.Life / playerStats.MaxLife;
+            }
+        }
     }
 }
