@@ -246,13 +246,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7cda9ce61edbe64fbfba43174485b98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3.6
+  speed: 3
   speedJump: 5
   cam: {fileID: 7760250826293155146}
-  mouseHorizontal: 3
-  mouseVertical: 2
+  mouseSensitivityX: 7
+  mouseSensitivityY: 7
   minRotation: -65
   maxRotation: 60
+  Life: 100
+  MaxLife: 100
 --- !u!54 &5164282839608031692
 Rigidbody:
   m_ObjectHideFlags: 0
