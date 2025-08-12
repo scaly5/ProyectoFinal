@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class DontDestroy : MonoBehaviour
 {
-    void Awake()
+    private void Awake()
     {
-        GameObject[] objs = GameObject.FindGameObjectsWithTag("music");
+        // Buscar todos los objetos con el tag "music"
+        GameObject[] musicObjects = GameObject.FindGameObjectsWithTag("music");
 
-        if (objs.Length > 1)
+        // Si ya existe otro objeto con el mismo tag, destruir este para evitar duplicados
+        if (musicObjects.Length > 1)
         {
-            Destroy(this.gameObject);
+            Destroy(gameObject);
+            return;
         }
 
-        DontDestroyOnLoad(this.gameObject);
+        // Hacer que este objeto no se destruya al cambiar de escena
+        DontDestroyOnLoad(gameObject);
     }
 }
