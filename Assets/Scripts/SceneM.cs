@@ -25,4 +25,8 @@ public class MenuPrincipal: MonoBehaviour
 {
     SceneManager.LoadScene("CREDITOS", LoadSceneMode.Single);
 }
+public void controls()
+{
+    SceneManager.LoadScene("Controles", LoadSceneMode.Single);
+}
 }
