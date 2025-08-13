@@ -12,6 +12,13 @@ public class InventoryStats : MonoBehaviour
 
     void Update()
     {
-        monedastxt.text = "GoatCoin: " + Coins.ToString();
+        if (monedastxt != null)
+        {
+            monedastxt.text = "GoatCoin: " + Coins.ToString();
+        }
+        else
+        {
+            Debug.LogWarning("monedastxt no esta asignado en el Inspector.");
+        }
     }
 }
