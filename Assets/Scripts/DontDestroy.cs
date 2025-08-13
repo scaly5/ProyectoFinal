@@ -6,11 +6,11 @@ public class DontDestroy : MonoBehaviour
 {
     private void Awake()
     {
-        // Buscar todos los objetos con el tag "music"
-        GameObject[] musicObjects = GameObject.FindGameObjectsWithTag("music");
+        // Buscar todos los objetos con el mismo tipo de componente (DontDestroy)
+        DontDestroy[] instances = FindObjectsOfType<DontDestroy>();
 
-        // Si ya existe otro objeto con el mismo tag, destruir este para evitar duplicados
-        if (musicObjects.Length > 1)
+        // Si ya hay otra instancia distinta de esta, destruir este objeto
+        if (instances.Length > 1)
         {
             Destroy(gameObject);
             return;
