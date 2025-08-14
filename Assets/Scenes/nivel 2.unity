@@ -105,18 +105,18 @@ NavMeshSettings:
   m_BuildSettings:
     serializedVersion: 3
     agentTypeID: 0
-    agentRadius: 0.5
+    agentRadius: 0.3
     agentHeight: 2
     agentSlope: 45
     agentClimb: 0.4
     ledgeDropHeight: 0
     maxJumpAcrossDistance: 0
     minRegionArea: 2
-    manualCellSize: 0
-    cellSize: 0.16666667
+    manualCellSize: 1
+    cellSize: 0.1
     manualTileSize: 0
     tileSize: 256
-    buildHeightMesh: 0
+    buildHeightMesh: 1
     maxJobWorkers: 0
     preserveTilesOutsideBounds: 0
     debug:
@@ -5245,6 +5245,33 @@ Transform:
   - {fileID: 215130258}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &601349869 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1893022538616854154, guid: 8ee08d04ad5df46fbb2e97260b63420b, type: 3}
+  m_PrefabInstance: {fileID: 777838900}
+  m_PrefabAsset: {fileID: 0}
+--- !u!195 &601349872
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 601349869}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.93780416
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2.5413737
+  m_BaseOffset: 1.2706869
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &608151446
 GameObject:
   m_ObjectHideFlags: 0
@@ -7031,10 +7058,10 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 19588385245968726, guid: 8ee08d04ad5df46fbb2e97260b63420b, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1763711894}
-    - targetCorrespondingSourceObject: {fileID: 19588385245968726, guid: 8ee08d04ad5df46fbb2e97260b63420b, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 1763711895}
+    - targetCorrespondingSourceObject: {fileID: 1893022538616854154, guid: 8ee08d04ad5df46fbb2e97260b63420b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 601349872}
   m_SourcePrefab: {fileID: 100100000, guid: 8ee08d04ad5df46fbb2e97260b63420b, type: 3}
 --- !u!1 &782375845
 GameObject:
@@ -17136,28 +17163,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 19588385245968726, guid: 8ee08d04ad5df46fbb2e97260b63420b, type: 3}
   m_PrefabInstance: {fileID: 777838900}
   m_PrefabAsset: {fileID: 0}
---- !u!195 &1763711894
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1763711889}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 2
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 1
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
 --- !u!54 &1763711895
 Rigidbody:
   m_ObjectHideFlags: 0
