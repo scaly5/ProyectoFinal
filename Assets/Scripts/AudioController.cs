@@ -17,7 +17,7 @@ public class AudioController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        audioMixer = Resources.Load<AudioMixer>("MainMixed");
+        audioMixer = Resources.Load<AudioMixer>("LaCabra");
     }
 public float GetLevel(string bus)
     {
