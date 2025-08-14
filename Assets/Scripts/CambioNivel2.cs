@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
-public class CambioScene : MonoBehaviour
+public class CambioNivel2 : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
