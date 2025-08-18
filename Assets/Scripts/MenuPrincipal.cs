@@ -25,4 +25,8 @@ public class SceneM: MonoBehaviour
 {
     SceneManager.LoadScene("creditos2", LoadSceneMode.Single);
 }
+   public void Visual1()
+{
+    SceneManager.LoadScene("Scene2", LoadSceneMode.Single);
+}
 }

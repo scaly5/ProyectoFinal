@@ -29,4 +29,8 @@ public void controls()
 {
     SceneManager.LoadScene("Controles", LoadSceneMode.Single);
 }
+public void visual()
+{
+    SceneManager.LoadScene("Scene1", LoadSceneMode.Single);
+}
 }
