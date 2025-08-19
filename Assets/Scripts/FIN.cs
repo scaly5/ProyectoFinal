@@ -9,7 +9,7 @@ public class Win1 : MonoBehaviour
     Debug.Log("se tocan ");
     if(collider.CompareTag("Player"))
         {
-    SceneManager.LoadScene("creditos2", LoadSceneMode.Single);
+    SceneManager.LoadScene("Scene3", LoadSceneMode.Single);
         }// escena nueva
     }
 }
